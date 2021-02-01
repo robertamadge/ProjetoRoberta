@@ -1,0 +1,41 @@
+@CHARSET "UTF-8";
+
+.titulo-login{
+    font-size: 40px;
+    color: beige;
+    text-align: center;
+    font-weight: 500;
+}
+.imagem{
+    padding-top: 10px;
+    width: 100%;
+    height: 1000px;
+    background:url(https://img.wallpapersafari.com/desktop/1920/1080/83/72/FKbay7.png)
+}
+.ui-widget-header{
+    font-weight: normal;
+    font-size: 20px;
+}
+.ui-inputfield{
+    font-weight: normal;
+    font-size: 20px;
+}
+.ui-widget-content{
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header  {
+    border: 1px solid #c5dbec;
+    background: #2a011a;
+    font-weight: bold;
+    color: beige;
+}
+
+.ui-sidebar-left {
+    background-color: beige;
+}
+
+.ui-sidebar-close {
+    display: none !important;
+}

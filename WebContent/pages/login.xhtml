@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+
+<ui:composition template="/template/templategeral.xhtml">
+
+    <ui:define name="body">
+        <h:form styleClass="titulo-login" id="form-login">
+            <p:growl/>
+            <div class="imagem" style="text-align: center">
+                <div class="panel-login">
+                    <div class="titulo-login">
+                        Login
+                    </div>
+
+                    <p:outputLabel class="titulo-usuario" var="usuario"
+                                   value="Usuário:" style="margin: 5px"/>
+                    <p:inputText styleClass="usuario" value="#{usuarioMB.usuarioLogin.email}" required="true"
+                                 requiredMessage="Usuário Obrigatório!" unselectable="true"/>
+                    <br/>
+
+                    <p:outputLabel class="titulo-usuario" var="senhaLogin"
+                                   value="Senha:" style="margin: 10px"/>
+                    <p:password styleClass="usuario" required="true" requiredMessage="Senha Obrigatória!"
+                                unselectable="true" value="#{usuarioMB.usuarioLogin.senha}"/>
+
+
+                    <br/>
+                    <p:commandButton styleClass="button-style"
+                                     value="Entrar #{senhaLogin.equals(usuarioMB.usuarioLogin.senha)}"
+                                     update="form-login"
+                                     ajax="false" action="../pages/usuarios.xhtml"
+                                     onclick="PF('dlgLogIn').show();" style="margin: 15px"/>
+
+
+                    <p:commandButton styleClass="button-style" value="Cadastrar"
+                                     actionListener="#{usuarioMB.limparUsuario()}" immediate="true"
+                                     onclick="PF('sideBarCadastro').show();">
+                    </p:commandButton>
+
+
+                    <p:sidebar header="Cadastro" widgetVar="sideBarCadastro" minHeight="20">
+
+                        <h:form id="form-cadastro">
+
+                            <p:outputLabel value="Nome:* "/>
+                            <p:inputText value="#{usuarioMB.usuarioCadastro.nome}"
+                                         required="true" requiredMessage="Nome obrigatório!"
+                                         unselectable="true" style="margin: 10px;"/>
+                            <br/>
+                            <p:outputLabel value="Email:* "/>
+                            <p:inputText value="#{usuarioMB.usuarioCadastro.email}"
+                                         required="true" requiredMessage="Email obrigatório!"
+                                         unselectable="true" style="margin: 10px;"/>
+                            <br/>
+                            <p:outputLabel value="Senha:* "/>
+                            <p:password value="#{usuarioMB.usuarioCadastro.senha}"
+                                        required="true" requiredMessage="Senha Orbigatória"
+                                        unselectable="true" style="margin: 10px;"/>
+                            <br/>
+                            <p:commandButton styleClass="button-style" value="Cadastrar" update="form-cadastro"
+                                             actionListener="#{usuarioMB.cadastrar}"
+                                             onclick="PF('sideBarCadastro').hide();"/>
+                            <p:commandButton styleClass="button-style" value="Cancelar" immediate="true"
+                                             onclick="PF('sideBarCadastro').hide();"/>
+                        </h:form>
+                    </p:sidebar>
+
+                </div>
+            </div>
+
+        </h:form>
+    </ui:define>
+</ui:composition>
+</html>
+
+

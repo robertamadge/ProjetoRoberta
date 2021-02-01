@@ -1,0 +1,31 @@
+/*.background*/
+/*style="background: darkslateblue; width: 100%; color: white*/
+
+.cabecalho {
+    padding: 6px;
+    width: 100%;
+    background-color: #2a011a;
+    text-align: justify;
+    height: 40px
+}
+
+.titulo-template {
+    font-size: 21px;
+    color: beige;
+    font-weight: 500;
+}
+.footer{
+    background-color: #2a011a;
+    text-align: end;
+    padding: 25px;
+
+
+}
+
+a{
+    color: beige;
+    float: right;
+}
+
+
+

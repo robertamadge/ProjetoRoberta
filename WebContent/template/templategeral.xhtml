@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+    <ui:insert name="title">
+        <title>Projeto Roberta</title>
+    </ui:insert>
+
+    <link rel="StyleSheet" type="text/css" href="../css/bootstrap.css"/>
+    <link rel="StyleSheet" type="text/css" href="../css/login.css"/>
+    <link rel="StyleSheet" type="text/css" href="../css/templategeral.css"/>
+    <link rel="StyleSheet" type="text/css" href="../css/home.css"/>
+</h:head>
+
+<h:body>
+    <div class="cabecalho titulo-template">
+        <div class="titulo-template">
+            Site da Roberta
+            <a  href="http://localhost:8080/projeto_base_war_exploded/pages/login.faces">Login/Cadastrar</a>
+        </div>
+
+
+    </div>
+    <div id="container">
+        <ui:insert name="body"/>
+
+    </div>
+
+
+    <div class="footer">
+        <a href="https://github.com/robertamadge" target="_blank"
+           style="color: beige" >
+            <img width="20" height="20" src="../imgs/gitlogo.png"
+                 alt="Git: robertamadge"> Git: robertamadge
+            </img>
+        </a>
+    </div>
+
+
+ </h:body>
+</html>
